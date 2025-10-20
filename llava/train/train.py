@@ -64,6 +64,13 @@ class ModelArguments:
     mm_use_im_patch_token: bool = field(default=True)
     mm_patch_merge_type: Optional[str] = field(default='flat')
     mm_vision_select_feature: Optional[str] = field(default="patch")
+    # ADD THESE 2 LINES:
+    vit_checkpoint_path: Optional[str] = field(default=None)
+    use_all_vit_tokens: bool = field(default=True)
+    mm_hidden_size: Optional[int] = field(default=1024)
+    freeze_vision_tower: bool = field(default=False)
+    vit_checkpoint_path: Optional[str] = field(default=None)
+    use_all_vit_tokens: bool = field(default=True)
 
 
 @dataclass
