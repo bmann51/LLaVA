@@ -2,6 +2,9 @@
 
 # Test training with 200 examples
 
+# Set PYTHONPATH to use local llava module instead of site-packages
+export PYTHONPATH=/gpfs/scratch/gs4342/LLaVA:$PYTHONPATH
+
 python llava/train/train_mem.py \
     --model_name_or_path lmsys/vicuna-7b-v1.5 \
     --version v1 \

@@ -1,4 +1,5 @@
 import sys
+import os
 
 headct_path = '/gpfs/data/proteomics/home/bm3772/headCT_foundation'
 if headct_path not in sys.path:
@@ -8,7 +9,7 @@ import torch
 import torch.nn as nn
 from typing import Optional
 
-from llava.fm_ct.vit import ViT
+from src.models.vit import ViT
 
 
 class MedicalViTTower(nn.Module):

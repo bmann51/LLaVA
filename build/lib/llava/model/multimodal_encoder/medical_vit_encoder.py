@@ -1,5 +1,7 @@
 import sys
+import os
 
+# Add your headCT_foundation repo to path
 headct_path = '/gpfs/data/proteomics/home/bm3772/headCT_foundation'
 if headct_path not in sys.path:
     sys.path.insert(0, headct_path)
@@ -8,7 +10,8 @@ import torch
 import torch.nn as nn
 from typing import Optional
 
-from llava.fm_ct.vit import ViT
+# Import your ViT
+from src.models.vit import ViT
 
 
 class MedicalViTTower(nn.Module):
